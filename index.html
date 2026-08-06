@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Habitaciones en alquiler en Madrid | La Tribu Rooms</title>
+<meta name="description" content="Habitaciones reales, verificadas y con fianza protegida. Alquiler de habitaciones en Madrid y Leganés gestionado por La Tribu Rooms, sin honorarios de agencia.">
+<link rel="canonical" href="https://latriburooms.es/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --terracota:#8C4A2F;
+    --terracota-dark:#6E3A24;
+    --oliva:#6B6F4C;
+    --oliva-dark:#565940;
+    --carbon:#2B2724;
+    --crema:#F7F2EA;
+    --carbon-suave:#5C5650;
+    --linea:#E3D9C9;
+    --verde-ok:#3F6B4A;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--crema);color:var(--carbon);font-family:'Inter',sans-serif;
+    line-height:1.5;
+  }
+  img{max-width:100%;display:block;}
+  a{color:inherit;}
+  h1,h2,h3{font-family:'Fraunces',serif;color:var(--carbon);text-wrap:balance;}
+  .section-inner{max-width:1080px;margin:0 auto;padding:0 24px;}
+  .mono{font-family:'JetBrains Mono',monospace;}
+
+  /* Header */
+  header{
+    position:sticky;top:0;z-index:50;background:rgba(247,242,234,0.92);backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--linea);
+  }
+  .nav-inner{max-width:1080px;margin:0 auto;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;}
+  .logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
+  .logo img{width:36px;height:36px;object-fit:contain;}
+  .logo-text{font-family:'Fraunces',serif;font-weight:600;font-size:1.05rem;line-height:1.1;}
+  .logo-text .sub{font-family:'Inter',sans-serif;font-size:0.6rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--carbon-suave);font-weight:600;display:block;margin-top:1px;}
+  nav ul{list-style:none;display:flex;gap:28px;}
+  nav a{text-decoration:none;font-size:0.92rem;font-weight:500;color:var(--carbon);}
+  nav a:hover{color:var(--terracota);}
+  .nav-cta{
+    background:var(--terracota);color:#fff !important;padding:10px 20px;border-radius:2px;
+    text-decoration:none;font-weight:600;font-size:0.9rem;white-space:nowrap;
+  }
+  .nav-cta:hover{background:var(--terracota-dark);}
+  @media (max-width:760px){ nav ul{display:none;} }
+
+  /* Hero */
+  .hero{padding:64px 0 48px;}
+  .hero-inner{max-width:1080px;margin:0 auto;padding:0 24px;text-align:center;}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:8px;font-family:'JetBrains Mono',monospace;font-size:0.76rem;
+    letter-spacing:0.08em;color:var(--terracota);text-transform:uppercase;font-weight:500;margin-bottom:18px;
+  }
+  .eyebrow::before{content:'';width:24px;height:1px;background:var(--terracota);}
+  h1{font-size:clamp(2.1rem,5vw,3.2rem);font-weight:600;line-height:1.1;margin-bottom:18px;}
+  h1 em{font-style:italic;color:var(--terracota);font-weight:500;}
+  .hero-sub{font-size:1.1rem;color:var(--carbon-suave);max-width:560px;margin:0 auto 30px;}
+  .hero-stats{display:flex;gap:32px;justify-content:center;flex-wrap:wrap;margin-bottom:34px;}
+  .hero-stat strong{display:block;font-family:'Fraunces',serif;font-size:1.7rem;color:var(--terracota);}
+  .hero-stat span{font-size:0.82rem;color:var(--carbon-suave);}
+  .btn-primary{
+    display:inline-block;background:var(--terracota);color:#fff;padding:16px 32px;border-radius:2px;
+    text-decoration:none;font-weight:600;font-size:1rem;transition:transform .15s, background .15s;
+  }
+  .btn-primary:hover{background:var(--terracota-dark);transform:translateY(-2px);}
+
+  /* Garantías strip */
+  .garantias{background:var(--carbon);padding:36px 0;}
+  .garantias-grid{
+    max-width:1080px;margin:0 auto;padding:0 24px;
+    display:grid;grid-template-columns:repeat(4,1fr);gap:20px;
+  }
+  .garantia-item{display:flex;align-items:flex-start;gap:12px;}
+  .garantia-icon{
+    width:38px;height:38px;flex-shrink:0;border-radius:50%;background:rgba(140,74,47,0.45);
+    display:flex;align-items:center;justify-content:center;color:#F7F2EA;
+  }
+  .garantia-icon svg{width:18px;height:18px;}
+  .garantia-item h3{color:#fff;font-family:'Inter',sans-serif;font-weight:600;font-size:0.92rem;margin-bottom:3px;}
+  .garantia-item p{color:#C9C2B8;font-size:0.82rem;line-height:1.4;}
+  @media (max-width:880px){ .garantias-grid{grid-template-columns:repeat(2,1fr);} }
+  @media (max-width:520px){ .garantias-grid{grid-template-columns:1fr;} }
+
+  /* Section head */
+  .section{padding:72px 0;}
+  .section-head{text-align:center;max-width:600px;margin:0 auto 44px;}
+  .section-head h2{font-size:clamp(1.6rem,3.6vw,2.2rem);margin-bottom:12px;}
+  .section-head p{color:var(--carbon-suave);font-size:1.02rem;}
+
+  /* Room cards */
+  .rooms-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  @media (max-width:900px){ .rooms-grid{grid-template-columns:repeat(2,1fr);} }
+  @media (max-width:620px){ .rooms-grid{grid-template-columns:1fr;} }
+  .room-card{
+    background:#fff;border:1px solid var(--linea);border-radius:6px;overflow:hidden;
+    display:flex;flex-direction:column;transition:transform .15s, box-shadow .15s;
+  }
+  .room-card:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(43,39,36,0.1);}
+  .room-photo{
+    height:180px;background:linear-gradient(135deg,#E9DCD2,#F1E7DA);
+    display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;
+  }
+  .room-photo img{width:100%;height:100%;object-fit:cover;}
+  .photo-label{font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--carbon-suave);letter-spacing:0.05em;text-transform:uppercase;}
+  .room-badge{
+    position:absolute;top:12px;left:12px;background:var(--verde-ok);color:#fff;font-size:0.68rem;font-weight:600;
+    padding:4px 10px;border-radius:20px;letter-spacing:0.03em;
+  }
+  .room-offer{
+    position:absolute;top:12px;right:12px;background:var(--terracota);color:#fff;font-size:0.68rem;font-weight:600;
+    padding:4px 10px;border-radius:20px;
+  }
+  .room-body{padding:18px 18px 20px;flex:1;display:flex;flex-direction:column;}
+  .room-zone{font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--terracota);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:6px;}
+  .room-title{font-family:'Fraunces',serif;font-size:1.08rem;font-weight:600;margin-bottom:8px;line-height:1.3;}
+  .room-meta{display:flex;gap:12px;font-size:0.82rem;color:var(--carbon-suave);margin-bottom:12px;}
+  .room-price{margin-top:auto;padding-top:10px;border-top:1px solid var(--linea);display:flex;align-items:baseline;justify-content:space-between;}
+  .room-price strong{font-family:'Fraunces',serif;font-size:1.3rem;color:var(--carbon);}
+  .room-price .old-price{font-size:0.8rem;color:var(--carbon-suave);text-decoration:line-through;margin-right:6px;}
+  .room-price span.per{font-size:0.78rem;color:var(--carbon-suave);}
+  .room-link{
+    display:block;margin-top:14px;text-align:center;border:1.5px solid var(--carbon);color:var(--carbon);
+    padding:10px;border-radius:2px;text-decoration:none;font-weight:600;font-size:0.86rem;transition:.15s;
+  }
+  .room-link:hover{background:var(--carbon);color:#fff;}
+  .rooms-note{text-align:center;color:var(--carbon-suave);font-size:0.88rem;margin-top:32px;}
+
+  /* Cómo funciona */
+  .como-funciona{background:#fff;}
+  .pasos{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;counter-reset:paso;}
+  @media (max-width:880px){ .pasos{grid-template-columns:repeat(2,1fr);} }
+  @media (max-width:520px){ .pasos{grid-template-columns:1fr;} }
+  .paso{position:relative;padding-top:8px;}
+  .paso::before{
+    counter-increment:paso;content:counter(paso);
+    display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;
+    border-radius:50%;background:var(--crema);border:1.5px solid var(--terracota);color:var(--terracota);
+    font-family:'JetBrains Mono',monospace;font-weight:600;font-size:0.9rem;margin-bottom:14px;
+  }
+  .paso h3{font-family:'Inter',sans-serif;font-weight:600;font-size:1rem;margin-bottom:6px;}
+  .paso p{font-size:0.88rem;color:var(--carbon-suave);}
+
+  /* App */
+  .app-section{background:var(--crema);}
+  .app-inner{
+    max-width:1080px;margin:0 auto;padding:0 24px;
+    display:grid;grid-template-columns:auto 1fr;gap:48px;align-items:center;
+  }
+  @media (max-width:760px){ .app-inner{grid-template-columns:1fr;text-align:center;} }
+  .app-icon-wrap{display:flex;justify-content:center;}
+  .app-icon-wrap img{
+    width:128px;height:128px;border-radius:28px;box-shadow:0 16px 36px rgba(43,39,36,0.18);
+  }
+  .app-copy h2{font-size:clamp(1.5rem,3.4vw,2rem);margin-bottom:10px;}
+  .app-copy > p{color:var(--carbon-suave);font-size:1rem;margin-bottom:24px;max-width:480px;}
+  @media (max-width:760px){ .app-copy > p{margin-left:auto;margin-right:auto;} }
+  .app-features{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:10px 24px;margin-bottom:24px;}
+  @media (max-width:520px){ .app-features{grid-template-columns:1fr;text-align:left;} }
+  .app-features li{display:flex;align-items:center;gap:8px;font-size:0.9rem;color:var(--carbon);}
+  .app-features li::before{content:'✓';color:var(--verde-ok);font-weight:700;}
+  .app-soon{
+    display:inline-flex;align-items:center;gap:8px;font-family:'JetBrains Mono',monospace;font-size:0.76rem;
+    color:var(--carbon-suave);text-transform:uppercase;letter-spacing:0.05em;
+    border:1px solid var(--linea);border-radius:20px;padding:8px 16px;
+  }
+  .app-soon::before{content:'●';color:var(--terracota);font-size:0.6rem;}
+
+  /* FAQ */
+  .faq-list{max-width:720px;margin:0 auto;}
+  .faq-item{border-bottom:1px solid var(--linea);padding:20px 0;}
+  .faq-item summary{
+    cursor:pointer;font-family:'Inter',sans-serif;font-weight:600;font-size:1rem;color:var(--carbon);
+    display:flex;justify-content:space-between;align-items:center;list-style:none;
+  }
+  .faq-item summary::-webkit-details-marker{display:none;}
+  .faq-item summary::after{content:'+';font-family:'JetBrains Mono',monospace;font-size:1.3rem;color:var(--terracota);flex-shrink:0;margin-left:16px;}
+  .faq-item[open] summary::after{content:'–';}
+  .faq-item p{margin-top:12px;color:var(--carbon-suave);font-size:0.94rem;line-height:1.6;}
+
+  /* Contacto / footer */
+  .contacto{background:var(--carbon);color:#fff;text-align:center;}
+  .contacto h2{color:#fff;}
+  .contacto p{color:#C9C2B8;max-width:480px;margin:12px auto 30px;}
+  .whatsapp-btn{
+    display:inline-flex;align-items:center;gap:10px;background:var(--verde-ok);color:#fff;
+    padding:15px 28px;border-radius:2px;text-decoration:none;font-weight:600;
+  }
+  .whatsapp-btn:hover{background:#345839;}
+
+  /* Floating WhatsApp */
+  .whatsapp-float{
+    position:fixed;right:22px;bottom:22px;z-index:200;
+    width:56px;height:56px;border-radius:50%;
+    background:#25D366;display:flex;align-items:center;justify-content:center;
+    box-shadow:0 6px 18px rgba(37,211,102,0.45);
+    transition:transform .2s ease, box-shadow .2s ease;
+  }
+  .whatsapp-float:hover{transform:scale(1.08);box-shadow:0 8px 22px rgba(37,211,102,0.55);}
+  @media (max-width:560px){ .whatsapp-float{right:16px;bottom:16px;width:50px;height:50px;} }
+  @media (prefers-reduced-motion: reduce){ .whatsapp-float{transition:none;} }
+
+  footer{padding:32px 0;text-align:center;}
+  footer p{font-size:0.8rem;color:var(--carbon-suave);}
+  footer a{color:var(--terracota);text-decoration:none;}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav-inner">
+    <a href="#top" class="logo">
+      <img src="img/logo-mark.png" alt="La Tribu Rooms">
+      <span class="logo-text">La Tribu Rooms<span class="sub">Alquiler de habitaciones · Madrid</span></span>
+    </a>
+    <nav>
+      <ul>
+        <li><a href="#habitaciones">Habitaciones</a></li>
+        <li><a href="#confianza">Confianza y seguridad</a></li>
+        <li><a href="#preguntas">Preguntas frecuentes</a></li>
+      </ul>
+    </nav>
+    <a class="nav-cta" href="https://wa.me/34649683511?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20una%20habitaci%C3%B3n%20en%20alquiler" target="_blank" rel="noopener">Escríbenos</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <p class="eyebrow">Madrid y zona sur · Leganés, Getafe, Fuenlabrada</p>
+      <h1>Encuentra tu próxima<br><em>habitación</em> sin sustos</h1>
+      <p class="hero-sub">Gestionamos cada habitación de principio a fin — sin honorarios de agencia, con fianza protegida y firma 100% digital.</p>
+      <div class="hero-stats">
+        <div class="hero-stat"><strong>6</strong><span>disponibles ahora</span></div>
+        <div class="hero-stat"><strong>+250</strong><span>habitaciones gestionadas</span></div>
+        <div class="hero-stat"><strong>0€</strong><span>de honorarios de agencia</span></div>
+      </div>
+      <a href="#habitaciones" class="btn-primary">Ver habitaciones disponibles</a>
+    </div>
+  </section>
+
+  <!-- GARANTÍAS -->
+  <section class="garantias" id="confianza">
+    <div class="garantias-grid">
+      <div class="garantia-item">
+        <div class="garantia-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div><h3>Habitación verificada</h3><p>La visitamos y publicamos nosotros mismos — lo que ves es lo que hay.</p></div>
+      </div>
+      <div class="garantia-item">
+        <div class="garantia-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4z"/></svg></div>
+        <div><h3>Fianza protegida</h3><p>Se deposita en el organismo oficial correspondiente, con resguardo a tu nombre.</p></div>
+      </div>
+      <div class="garantia-item">
+        <div class="garantia-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+        <div><h3>Firma 100% digital</h3><p>Reserva y contrato firmados con validez legal a través de Odoo.</p></div>
+      </div>
+      <div class="garantia-item">
+        <div class="garantia-icon" style="font-family:'Fraunces',serif;font-weight:700;font-size:1.15rem;">€</div>
+        <div><h3>Sin honorarios</h3><p>No cobramos comisión de agencia al inquilino, nunca.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HABITACIONES -->
+  <section class="section" id="habitaciones">
+    <div class="section-inner">
+      <div class="section-head">
+        <p class="eyebrow" style="justify-content:center;">Disponibles ahora</p>
+        <h2>Habitaciones en alquiler</h2>
+        <p>Precios y disponibilidad reales — se actualiza según se van alquilando. Pulsa "Ver en Idealista" para todas las fotos y detalles.</p>
+      </div>
+
+      <div class="rooms-grid">
+
+        <div class="room-card">
+          <div class="room-photo"><img src="img/room1.webp" alt="Habitación en alquiler" loading="lazy"><span class="room-badge">Disponible</span></div>
+          <div class="room-body">
+            <p class="room-zone">Tres Olivos · Madrid</p>
+            <p class="room-title">Individual junto al metro Begoña</p>
+            <p class="room-meta">🛏 Individual · ❄️ Aire acondicionado · 🚇 1 min. metro</p>
+            <div class="room-price"><strong>500€</strong><span class="per">/mes</span></div>
+            <a class="room-link" href="https://www.idealista.com/pro/novos-real-estate-madrid/inmueble/112195324/" target="_blank" rel="noopener">Ver en Idealista →</a>
+          </div>
+        </div>
+
+        <div class="room-card">
+          <div class="room-photo"><img src="img/room2.webp" alt="Habitación en alquiler" loading="lazy"><span class="room-badge">Disponible</span></div>
+          <div class="room-body">
+            <p class="room-zone">San Nicasio · Leganés</p>
+            <p class="room-title">Individual cerca de la Universidad Carlos III</p>
+            <p class="room-meta">🛏 Individual · 📺 Nevera y TV · 🚇 7 min. metro</p>
+            <div class="room-price"><strong>440€</strong><span class="per">/mes</span></div>
+            <a class="room-link" href="https://www.idealista.com/pro/novos-real-estate-madrid/inmueble/110004904/" target="_blank" rel="noopener">Ver en Idealista →</a>
+          </div>
+        </div>
+
+        <div class="room-card">
+          <div class="room-photo"><img src="img/room3.webp" alt="Habitación en alquiler" loading="lazy"><span class="room-badge">Disponible</span></div>
+          <div class="room-body">
+            <p class="room-zone">Tres Olivos · Madrid</p>
+            <p class="room-title">Premium con aire acondicionado</p>
+            <p class="room-meta">🛏 Individual · ❄️ Aire acondicionado · 🚇 Metro Begoña</p>
+            <div class="room-price"><strong>525€</strong><span class="per">/mes</span></div>
+            <a class="room-link" href="https://www.idealista.com/pro/novos-real-estate-madrid/inmueble/112187464/" target="_blank" rel="noopener">Ver en Idealista →</a>
+          </div>
+        </div>
+
+        <div class="room-card">
+          <div class="room-photo"><img src="img/room4.webp" alt="Habitación en alquiler" loading="lazy"><span class="room-offer">Oferta verano</span></div>
+          <div class="room-body">
+            <p class="room-zone">San Fermín · Madrid</p>
+            <p class="room-title">Individual con baño y aseo propio, piso reformado</p>
+            <p class="room-meta">🛏 Individual · 🚿 Baño propio · ✨ Reformado</p>
+            <div class="room-price"><span class="old-price">450€</span><strong>390€</strong><span class="per">/mes</span></div>
+            <a class="room-link" href="https://www.idealista.com/pro/novos-real-estate-madrid/inmueble/112077433/" target="_blank" rel="noopener">Ver en Idealista →</a>
+          </div>
+        </div>
+
+        <div class="room-card">
+          <div class="room-photo"><img src="img/room5.webp" alt="Habitación en alquiler" loading="lazy"><span class="room-badge">Disponible</span></div>
+          <div class="room-body">
+            <p class="room-zone">Tres Olivos · Madrid</p>
+            <p class="room-title">Premium con 2 baños completos</p>
+            <p class="room-meta">🛏 Individual · 🚿 2 baños · 🏥 10 min. Hosp. Ramón y Cajal</p>
+            <div class="room-price"><strong>490€</strong><span class="per">/mes</span></div>
+            <a class="room-link" href="https://www.idealista.com/pro/novos-real-estate-madrid/inmueble/112054450/" target="_blank" rel="noopener">Ver en Idealista →</a>
+          </div>
+        </div>
+
+        <div class="room-card">
+          <div class="room-photo"><img src="img/room6.webp" alt="Habitación en alquiler" loading="lazy"><span class="room-badge">Disponible</span></div>
+          <div class="room-body">
+            <p class="room-zone">San Nicasio · Leganés</p>
+            <p class="room-title">Individual en zona con colegios y servicios</p>
+            <p class="room-meta">🛏 Individual · 🚇 10 min. metro · 🏫 Cerca Carlos III</p>
+            <div class="room-price"><strong>395€</strong><span class="per">/mes</span></div>
+            <a class="room-link" href="https://www.idealista.com/pro/novos-real-estate-madrid/inmueble/112137331/" target="_blank" rel="noopener">Ver en Idealista →</a>
+          </div>
+        </div>
+
+      </div>
+      <p class="rooms-note">¿No ves lo que buscas? Escríbenos por WhatsApp y te avisamos en cuanto salga una habitación nueva.</p>
+    </div>
+  </section>
+
+  <!-- CÓMO FUNCIONA -->
+  <section class="section como-funciona">
+    <div class="section-inner">
+      <div class="section-head">
+        <p class="eyebrow" style="justify-content:center;">Proceso</p>
+        <h2>Cómo funciona</h2>
+        <p>Sin sorpresas, sin intermediarios raros — todo pasa por nosotros, de principio a fin.</p>
+      </div>
+      <div class="pasos">
+        <div class="paso">
+          <h3>Ves la habitación real</h3>
+          <p>Fotos, vídeo y, si quieres, una videollamada en directo antes de decidir nada.</p>
+        </div>
+        <div class="paso">
+          <h3>Tratas siempre con nosotros</h3>
+          <p>Nunca con el propietario ni con su documentación — nosotros gestionamos todo el proceso.</p>
+        </div>
+        <div class="paso">
+          <h3>Firmas en digital</h3>
+          <p>Reserva y contrato con firma electrónica legal a través de Odoo. Todo queda documentado.</p>
+        </div>
+        <div class="paso">
+          <h3>Te mudas tranquilo</h3>
+          <p>Tu fianza está depositada en el organismo oficial, con resguardo a tu nombre.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- APP -->
+  <section class="section app-section">
+    <div class="app-inner">
+      <div class="app-icon-wrap">
+        <img src="img/app-icon.png" alt="Icono de la app La Tribu">
+      </div>
+      <div class="app-copy">
+        <h2>Y una vez seas parte de la tribu, lo gestionas todo desde el móvil</h2>
+        <p>En cuanto entras a vivir, tienes acceso a <strong>La Tribu</strong>, nuestra app para inquilinos — todo tu alquiler, en un solo sitio.</p>
+        <ul class="app-features">
+          <li>Notifica tu pago cada mes</li>
+          <li>Reporta incidencias con foto</li>
+          <li>Consulta y descarga tu contrato</li>
+          <li>Reserva limpieza a domicilio</li>
+          <li>Contrata tu seguro de inquilino</li>
+          <li>Notifica tu salida sin líos</li>
+        </ul>
+        <span class="app-soon">Disponible próximamente en App Store y Google Play</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="preguntas">
+    <div class="section-inner">
+      <div class="section-head">
+        <p class="eyebrow" style="justify-content:center;">Dudas frecuentes</p>
+        <h2>Preguntas frecuentes</h2>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>¿Por qué no me enseñáis el DNI del propietario ni la nota registral de la propiedad?</summary>
+          <p>Por cumplimiento del Reglamento General de Protección de Datos (RGPD) y la Ley Orgánica 3/2018 (LOPDGDD): los datos de identidad de un tercero —como el DNI o la nota simple del propietario— no pueden compartirse con otra persona sin su consentimiento expreso y sin una base legal que lo justifique. No es una decisión nuestra, es una obligación legal para cualquier profesional inmobiliario. La verificación de identidad de las partes se realiza en el momento de formalizar el contrato, tal y como exige la normativa, y en nuestro caso ese momento es 100% digital y con validez legal a través de Odoo. Como garantía adicional, podemos facilitarte un certificado de titularidad bancaria que confirma que la cuenta a la que se realizan los pagos corresponde al propietario.</p>
+        </details>
+        <details class="faq-item">
+          <summary>¿Cobráis algo al inquilino por gestionar el alquiler?</summary>
+          <p>No. No cobramos honorarios de agencia a los inquilinos. El precio que ves es el precio que pagas.</p>
+        </details>
+        <details class="faq-item">
+          <summary>¿Dónde queda depositada la fianza?</summary>
+          <p>En el organismo oficial correspondiente, tal y como exige la ley. Recibirás copia del resguardo del depósito.</p>
+        </details>
+        <details class="faq-item">
+          <summary>¿Cómo se firma el contrato?</summary>
+          <p>De forma 100% digital, a través de Odoo, una plataforma de firma electrónica con validez legal. No hace falta que te desplaces a firmar nada en papel.</p>
+        </details>
+        <details class="faq-item">
+          <summary>¿Puedo ver la habitación antes de reservar?</summary>
+          <p>Sí — con fotos y vídeo reales, y también hacemos visitas presenciales a la propiedad. Si no puedes venir en persona, te enseñamos la habitación en directo por videollamada antes de que decidas nada.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="section contacto">
+    <div class="section-inner">
+      <h2>¿Tienes dudas sobre alguna habitación?</h2>
+      <p>Escríbenos por WhatsApp y te respondemos personalmente, sin bots ni esperas.</p>
+      <a class="whatsapp-btn" href="https://wa.me/34649683511?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20una%20habitaci%C3%B3n%20en%20alquiler" target="_blank" rel="noopener">
+        Escríbenos por WhatsApp
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>&copy; 2026 La Tribu Rooms — Madrid, España · <a href="mailto:hola@latriburooms.es">hola@latriburooms.es</a></p>
+</footer>
+
+<a
+  class="whatsapp-float"
+  href="https://wa.me/34649683511?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20una%20habitaci%C3%B3n%20en%20alquiler"
+  target="_blank"
+  rel="noopener"
+  aria-label="Escríbenos por WhatsApp"
+>
+  <svg viewBox="0 0 32 32" width="28" height="28" fill="#fff" aria-hidden="true">
+    <path d="M16.004 3C9.1 3 3.5 8.6 3.5 15.5c0 2.43.68 4.7 1.86 6.64L3 29l7.06-2.32a12.4 12.4 0 0 0 5.94 1.52h.01c6.9 0 12.5-5.6 12.5-12.5S22.9 3 16.004 3Zm0 22.7h-.01a10.16 10.16 0 0 1-5.18-1.42l-.37-.22-3.86 1.27 1.3-3.76-.24-.39a10.13 10.13 0 0 1-1.56-5.4c0-5.62 4.58-10.2 10.22-10.2 2.73 0 5.29 1.06 7.22 3 1.93 1.93 3 4.5 2.99 7.22 0 5.63-4.58 10.9-10.51 10.9Zm5.61-7.65c-.31-.15-1.82-.9-2.1-1-.28-.1-.49-.15-.69.16-.2.3-.79 1-.97 1.2-.18.2-.36.23-.67.08-.31-.16-1.29-.48-2.46-1.53-.91-.81-1.52-1.82-1.7-2.12-.18-.31-.02-.47.13-.63.14-.14.31-.36.46-.54.15-.18.2-.31.31-.51.1-.2.05-.39-.02-.54-.08-.16-.69-1.68-.95-2.3-.25-.6-.5-.52-.69-.53h-.59c-.2 0-.53.08-.81.39-.28.31-1.06 1.04-1.06 2.53s1.09 2.94 1.24 3.14c.15.2 2.14 3.28 5.2 4.6.73.31 1.29.5 1.74.65.73.23 1.4.2 1.92.12.59-.09 1.82-.74 2.08-1.46.26-.71.26-1.32.18-1.46-.07-.13-.28-.21-.59-.36Z"/>
+  </svg>
+</a>
+
+</body>
+</html>
