@@ -54,27 +54,43 @@
   @media (max-width:760px){ nav ul{display:none;} }
 
   /* Hero */
-  .hero{padding:64px 0 48px;}
-  .hero-inner{max-width:1080px;margin:0 auto;padding:0 24px;text-align:center;}
+  .hero-pin-wrap{position:relative;height:175vh;}
+  @media (max-width:700px){ .hero-pin-wrap{height:150vh;} }
+  .hero{
+    position:sticky;top:0;overflow:hidden;
+    height:100vh;display:flex;align-items:center;justify-content:center;
+    padding:110px 24px 64px;
+    background:
+      radial-gradient(ellipse 60% 55% at 50% 38%, rgba(212,164,90,0.16), transparent 70%),
+      radial-gradient(ellipse 90% 70% at 50% 100%, #1f1b18, transparent),
+      linear-gradient(180deg, #211d1a 0%, #17140f 100%);
+  }
+  .hero-logo-bg{
+    position:absolute;top:14%;left:50%;transform:translate(-50%,0);
+    width:min(54vw, 560px);opacity:0.45;pointer-events:none;
+    filter:drop-shadow(0 30px 70px rgba(0,0,0,0.5));
+  }
+  .hero-inner{position:relative;z-index:2;max-width:1080px;margin:0 auto;padding:0 24px;text-align:center;}
   .eyebrow{
     display:inline-flex;align-items:center;gap:8px;font-family:'JetBrains Mono',monospace;font-size:0.76rem;
-    letter-spacing:0.08em;color:var(--terracota);text-transform:uppercase;font-weight:500;margin-bottom:18px;
+    letter-spacing:0.08em;color:#D4A45A;text-transform:uppercase;font-weight:500;margin-bottom:22px;
   }
-  .eyebrow::before{content:'';width:24px;height:1px;background:var(--terracota);}
-  h1{font-size:clamp(2.1rem,5vw,3.2rem);font-weight:600;line-height:1.1;margin-bottom:18px;}
-  h1 em{font-style:italic;color:var(--terracota);font-weight:500;}
-  .hero-sub{font-size:1.1rem;color:var(--carbon-suave);max-width:560px;margin:0 auto 30px;}
-  .hero-stats{display:flex;gap:32px;justify-content:center;flex-wrap:wrap;margin-bottom:34px;}
-  .hero-stat strong{display:block;font-family:'Fraunces',serif;font-size:1.7rem;color:var(--terracota);}
-  .hero-stat span{font-size:0.82rem;color:var(--carbon-suave);}
+  .eyebrow::before{content:'';width:24px;height:1px;background:#D4A45A;}
+  h1{font-size:clamp(2.4rem,6vw,4.4rem);font-weight:600;line-height:1.08;margin-bottom:22px;color:#fff;letter-spacing:-0.01em;}
+  h1 em{font-style:italic;color:#D4A45A;font-weight:500;}
+  .hero-sub{font-size:1.15rem;color:#C9BFB2;max-width:560px;margin:0 auto 36px;}
+  .hero-stats{display:flex;gap:40px;justify-content:center;flex-wrap:wrap;margin-bottom:40px;}
+  .hero-stat strong{display:block;font-family:'Fraunces',serif;font-size:1.9rem;color:#D4A45A;}
+  .hero-stat span{font-size:0.82rem;color:#8f867a;}
   .btn-primary{
-    display:inline-block;background:var(--terracota);color:#fff;padding:16px 32px;border-radius:2px;
-    text-decoration:none;font-weight:600;font-size:1rem;transition:transform .15s, background .15s;
+    display:inline-block;background:var(--terracota);color:#fff;padding:17px 34px;border-radius:2px;
+    text-decoration:none;font-weight:600;font-size:1rem;transition:transform .15s, background .15s, box-shadow .15s;
+    box-shadow:0 12px 30px rgba(140,74,47,0.35);
   }
   .btn-primary:hover{background:var(--terracota-dark);transform:translateY(-2px);}
 
   /* Garantías strip */
-  .garantias{background:var(--carbon);padding:36px 0;}
+  .garantias{position:relative;z-index:5;background:var(--carbon);padding:56px 0;border-radius:28px 28px 0 0;box-shadow:0 -30px 60px rgba(0,0,0,0.35);}
   .garantias-grid{
     max-width:1080px;margin:0 auto;padding:0 24px;
     display:grid;grid-template-columns:repeat(4,1fr);gap:20px;
@@ -242,19 +258,22 @@
 <main id="top">
 
   <!-- HERO -->
-  <section class="hero">
-    <div class="hero-inner">
-      <p class="eyebrow">Madrid y zona sur · Leganés, Getafe, Fuenlabrada</p>
-      <h1>Encuentra tu próxima<br><em>habitación</em> sin sustos</h1>
-      <p class="hero-sub">Gestionamos cada habitación de principio a fin — sin honorarios de agencia, con fianza protegida y firma 100% digital.</p>
-      <div class="hero-stats">
-        <div class="hero-stat"><strong>6</strong><span>disponibles ahora</span></div>
-        <div class="hero-stat"><strong>+250</strong><span>habitaciones gestionadas</span></div>
-        <div class="hero-stat"><strong>0€</strong><span>de honorarios de agencia</span></div>
+  <div class="hero-pin-wrap">
+    <section class="hero">
+      <img class="hero-logo-bg" src="img/logo-mark-hero.png" alt="" aria-hidden="true">
+      <div class="hero-inner">
+        <p class="eyebrow">Madrid y zona sur · Leganés, Getafe, Fuenlabrada</p>
+        <h1>Encuentra tu próxima<br><em>habitación</em> sin sustos</h1>
+        <p class="hero-sub">Gestionamos cada habitación de principio a fin — sin honorarios de agencia, con fianza protegida y firma 100% digital.</p>
+        <div class="hero-stats">
+          <div class="hero-stat"><strong>7</strong><span>disponibles ahora</span></div>
+          <div class="hero-stat"><strong>+250</strong><span>habitaciones gestionadas</span></div>
+          <div class="hero-stat"><strong>0€</strong><span>de honorarios de agencia</span></div>
+        </div>
+        <a href="#habitaciones" class="btn-primary">Ver habitaciones disponibles</a>
       </div>
-      <a href="#habitaciones" class="btn-primary">Ver habitaciones disponibles</a>
-    </div>
-  </section>
+    </section>
+  </div>
 
   <!-- GARANTÍAS -->
   <section class="garantias" id="confianza">
@@ -352,6 +371,17 @@
             <p class="room-meta">🛏 Individual · 🚇 10 min. metro · 🏫 Cerca Carlos III</p>
             <div class="room-price"><strong>395€</strong><span class="per">/mes</span></div>
             <a class="room-link" href="https://www.idealista.com/pro/novos-real-estate-madrid/inmueble/112137331/" target="_blank" rel="noopener">Ver en Idealista →</a>
+          </div>
+        </div>
+
+        <div class="room-card reveal">
+          <div class="room-photo"><img src="img/room7.webp" alt="Habitación en alquiler" loading="lazy"><span class="room-badge">Disponible</span></div>
+          <div class="room-body">
+            <p class="room-zone">San Nicasio · Leganés</p>
+            <p class="room-title">Individual con nevera y Smart TV, piso luminoso</p>
+            <p class="room-meta">🛏 Individual · 📺 Smart TV · 🎓 5 min. UC3M</p>
+            <div class="room-price"><strong>435€</strong><span class="per">/mes</span></div>
+            <a class="room-link" href="https://www.idealista.com/pro/novos-real-estate-madrid/inmueble/112214758/" target="_blank" rel="noopener">Ver en Idealista →</a>
           </div>
         </div>
 
@@ -492,6 +522,32 @@
       el.classList.add('visible');
     });
   }
+
+  // Hero: el logo crece y el texto se atenúa mientras la siguiente sección sube por encima
+  (function () {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var wrap = document.querySelector('.hero-pin-wrap');
+    var logo = document.querySelector('.hero-logo-bg');
+    var inner = document.querySelector('.hero-inner');
+    if (!wrap || !logo || !inner) return;
+
+    var ticking = false;
+    function update() {
+      var travel = wrap.offsetHeight - window.innerHeight;
+      var p = travel > 0 ? Math.min(Math.max(window.scrollY / travel, 0), 1) : 0;
+      // el texto sólo empieza a desvanecerse pasado el 45% del recorrido
+      var fade = Math.min(Math.max((p - 0.45) / 0.4, 0), 1);
+      logo.style.transform = 'translate(-50%,' + (-p * 40) + 'px) scale(' + (1 + p * 0.18) + ')';
+      logo.style.opacity = 0.45 * (1 - fade * 0.6);
+      inner.style.opacity = 1 - fade;
+      inner.style.transform = 'translateY(' + (-fade * 30) + 'px)';
+      ticking = false;
+    }
+    window.addEventListener('scroll', function () {
+      if (!ticking) { ticking = true; window.requestAnimationFrame(update); }
+    }, { passive: true });
+    update();
+  })();
 </script>
 
 </body>
