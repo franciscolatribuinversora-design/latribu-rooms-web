@@ -245,10 +245,12 @@
     position:absolute;top:12px;left:12px;background:var(--verde-ok);color:#fff;font-size:0.68rem;font-weight:600;
     padding:4px 10px;border-radius:20px;letter-spacing:0.03em;
   }
+  .room-badge.reservada{background:#B07A2E;}
   .room-offer{
     position:absolute;top:12px;right:12px;background:var(--terracota);color:#fff;font-size:0.68rem;font-weight:600;
     padding:4px 10px;border-radius:20px;
   }
+  .room-card.is-reservada .room-photo img{filter:saturate(0.55) brightness(0.94);}
   .room-body{padding:18px 18px 20px;flex:1;display:flex;flex-direction:column;}
   .room-zone{font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--terracota);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:6px;}
   .room-title{font-family:'Fraunces',serif;font-size:1.08rem;font-weight:600;margin-bottom:8px;line-height:1.3;}
@@ -389,7 +391,8 @@
             <span class="label">Disponibilidad</span>
             <span class="status">Actualizado</span>
           </div>
-          <div class="ficha-row"><span class="k">Habitaciones libres</span><span class="v">7</span></div>
+          <div class="ficha-row"><span class="k">Habitaciones libres</span><span class="v">4</span></div>
+          <div class="ficha-row"><span class="k">Reservadas</span><span class="v">3</span></div>
           <div class="ficha-row"><span class="k">Gestionadas</span><span class="v">+250</span></div>
           <div class="ficha-row"><span class="k">Honorarios al inquilino</span><span class="v">0 €</span></div>
           <div class="ficha-row"><span class="k">Desde</span><span class="v">390 €/mes</span></div>
@@ -431,8 +434,8 @@
 
       <div class="rooms-grid">
 
-        <div class="room-card reveal">
-          <div class="room-photo"><img src="img/room1.webp" alt="Habitación en alquiler" loading="lazy"><span class="room-badge">Disponible</span></div>
+        <div class="room-card reveal is-reservada">
+          <div class="room-photo"><img src="img/room1.webp" alt="Habitación en alquiler" loading="lazy"><span class="room-badge reservada">Reservada</span></div>
           <div class="room-body">
             <p class="room-zone">Tres Olivos · Madrid</p>
             <p class="room-title">Individual junto al metro Begoña</p>
@@ -442,8 +445,8 @@
           </div>
         </div>
 
-        <div class="room-card reveal">
-          <div class="room-photo"><img src="img/room2.webp" alt="Habitación en alquiler" loading="lazy"><span class="room-badge">Disponible</span></div>
+        <div class="room-card reveal is-reservada">
+          <div class="room-photo"><img src="img/room2.webp" alt="Habitación en alquiler" loading="lazy"><span class="room-badge reservada">Reservada</span></div>
           <div class="room-body">
             <p class="room-zone">San Nicasio · Leganés</p>
             <p class="room-title">Individual cerca de la Universidad Carlos III</p>
@@ -486,8 +489,8 @@
           </div>
         </div>
 
-        <div class="room-card reveal">
-          <div class="room-photo"><img src="img/room6.webp" alt="Habitación en alquiler" loading="lazy"><span class="room-badge">Disponible</span></div>
+        <div class="room-card reveal is-reservada">
+          <div class="room-photo"><img src="img/room6.webp" alt="Habitación en alquiler" loading="lazy"><span class="room-badge reservada">Reservada</span></div>
           <div class="room-body">
             <p class="room-zone">San Nicasio · Leganés</p>
             <p class="room-title">Individual en zona con colegios y servicios</p>
