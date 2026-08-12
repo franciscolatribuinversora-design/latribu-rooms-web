@@ -299,10 +299,22 @@
   @media (max-width:520px){ .app-features{grid-template-columns:1fr;text-align:left;} }
   .app-features li{display:flex;align-items:center;gap:8px;font-size:0.9rem;color:var(--carbon);}
   .app-features li::before{content:'✓';color:var(--verde-ok);font-weight:700;}
+  .app-stores{display:flex;gap:12px;flex-wrap:wrap;align-items:center;}
+  @media (max-width:760px){ .app-stores{justify-content:center;} }
+  .store-btn{
+    display:inline-flex;align-items:center;gap:10px;text-decoration:none;
+    background:var(--carbon);color:#fff;padding:11px 20px;border-radius:6px;
+    transition:transform .15s ease, background .15s ease;
+  }
+  .store-btn:hover{background:#1c1917;transform:translateY(-2px);}
+  .store-btn svg{width:22px;height:22px;flex:none;fill:#fff;}
+  .store-btn .txt{display:flex;flex-direction:column;line-height:1.15;text-align:left;}
+  .store-btn .txt small{font-size:0.62rem;letter-spacing:0.06em;text-transform:uppercase;opacity:0.75;}
+  .store-btn .txt strong{font-size:0.95rem;font-weight:600;}
   .app-soon{
-    display:inline-flex;align-items:center;gap:8px;font-family:'JetBrains Mono',monospace;font-size:0.76rem;
+    display:inline-flex;align-items:center;gap:8px;font-family:'JetBrains Mono',monospace;font-size:0.72rem;
     color:var(--carbon-suave);text-transform:uppercase;letter-spacing:0.05em;
-    border:1px solid var(--linea);border-radius:20px;padding:8px 16px;
+    border:1px solid var(--linea);border-radius:20px;padding:9px 16px;background:rgba(255,255,255,0.5);
   }
   .app-soon::before{content:'●';color:var(--terracota);font-size:0.6rem;}
 
@@ -562,7 +574,13 @@
           <li>Contrata tu seguro de inquilino</li>
           <li>Notifica tu salida sin líos</li>
         </ul>
-        <span class="app-soon">Disponible próximamente en App Store y Google Play</span>
+        <div class="app-stores">
+          <a class="store-btn" href="https://apps.apple.com/app/la-tribu/id6797298279" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.365 1.43c0 1.14-.42 2.2-1.12 3.01-.84.98-2.2 1.74-3.32 1.65-.14-1.1.4-2.25 1.07-3 .77-.87 2.11-1.55 3.37-1.66zM20.6 17.06c-.6 1.38-.9 2-1.67 3.22-1.08 1.7-2.6 3.82-4.48 3.83-1.67.02-2.1-1.09-4.37-1.08-2.27.01-2.74 1.1-4.42 1.09-1.88-.01-3.32-1.92-4.4-3.62C-.13 16.6-.44 11.02 1.4 8.06c1.3-2.1 3.36-3.33 5.3-3.33 1.97 0 3.2 1.09 4.83 1.09 1.58 0 2.54-1.09 4.82-1.09 1.72 0 3.55.94 4.85 2.56-4.26 2.34-3.57 8.43.4 9.77z"/></svg>
+            <span class="txt"><small>Descárgala en el</small><strong>App Store</strong></span>
+          </a>
+          <span class="app-soon">Google Play — próximamente</span>
+        </div>
       </div>
     </div>
   </section>
