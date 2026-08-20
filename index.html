@@ -4,6 +4,9 @@
 <meta charset="UTF-8">
 <meta name="google-site-verification" content="7xaaFdXnJKQr67Ho1Rk5s55ubfDNwt2tJnocivofJIE" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/img/favicon-192.png">
+<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
 <title>Habitaciones en alquiler en Madrid | La Tribu Rooms</title>
 <meta name="description" content="Habitaciones en alquiler en Madrid, Leganés, Getafe y Fuenlabrada. Sin honorarios de agencia, fianza protegida y firma 100% digital. Gestionadas por La Tribu Rooms.">
 <link rel="canonical" href="https://latriburooms.es/">
@@ -266,6 +269,50 @@
   .room-link:hover{background:var(--carbon);color:#fff;}
   .rooms-note{text-align:center;color:var(--carbon-suave);font-size:0.88rem;margin-top:32px;}
 
+  /* Buscador de habitación a medida */
+  .buscador{background:#fff;}
+  .buscador-panel{
+    max-width:780px;margin:0 auto;background:var(--crema);
+    border:1px solid var(--linea);border-radius:4px;padding:36px 34px;
+  }
+  .campo{border:0;padding:0;margin:0 0 26px;}
+  .campo:last-of-type{margin-bottom:22px;}
+  .campo > legend, .campo > label{
+    display:block;font-weight:600;font-size:0.92rem;color:var(--carbon);
+    margin-bottom:12px;padding:0;
+  }
+  .chips{display:flex;flex-wrap:wrap;gap:9px;}
+  .chip{position:relative;display:inline-flex;cursor:pointer;}
+  .chip input{position:absolute;inset:0;opacity:0;width:100%;height:100%;cursor:pointer;margin:0;}
+  .chip span{
+    display:inline-block;padding:9px 16px;border:1px solid var(--linea);
+    border-radius:2px;background:#fff;font-size:0.88rem;color:var(--carbon-suave);
+    transition:all .18s ease;
+  }
+  .chip input:checked + span{
+    background:var(--terracota);border-color:var(--terracota);color:#fff;font-weight:500;
+  }
+  .chip input:focus-visible + span{outline:2px solid var(--terracota);outline-offset:2px;}
+  .chip:hover input:not(:checked) + span{border-color:var(--terracota);color:var(--terracota);}
+  .campo-fila{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:26px;}
+  .campo-fila .campo{margin-bottom:0;}
+  .buscador-panel select, .buscador-panel textarea{
+    width:100%;padding:11px 13px;border:1px solid var(--linea);border-radius:2px;
+    background:#fff;font-family:inherit;font-size:0.92rem;color:var(--carbon);
+  }
+  .buscador-panel select:focus, .buscador-panel textarea:focus{
+    outline:2px solid var(--terracota);outline-offset:-1px;border-color:var(--terracota);
+  }
+  .buscador-panel textarea{resize:vertical;min-height:64px;}
+  .btn-buscar{width:100%;justify-content:center;border:0;cursor:pointer;font-family:inherit;}
+  .buscador-nota{
+    text-align:center;color:var(--carbon-suave);font-size:0.8rem;margin-top:14px;line-height:1.5;
+  }
+  @media (max-width:720px){
+    .buscador-panel{padding:26px 20px;}
+    .campo-fila{grid-template-columns:1fr;gap:22px;}
+  }
+
   /* Cómo funciona */
   .como-funciona{background:#fff;}
   .pasos{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;counter-reset:paso;}
@@ -524,9 +571,90 @@
         </div>
 
       </div>
-      <p class="rooms-note">¿No ves lo que buscas? Escríbenos por WhatsApp y te avisamos en cuanto salga una habitación nueva.</p>
+      <p class="rooms-note">¿No ves lo que buscas? <a href="#buscar">Cuéntanos qué necesitas</a> y te avisamos en cuanto salga una habitación nueva.</p>
     </div>
   </section>
+
+  <section class="section buscador" id="buscar">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow" style="justify-content:center;">Búsqueda a medida</p>
+        <h2>¿No encuentras tu habitación?</h2>
+        <p>Cuéntanos qué estás buscando y te avisamos en cuanto salga algo que encaje. Salen habitaciones nuevas cada pocas semanas.</p>
+      </div>
+
+      <form class="buscador-panel" id="form-busqueda">
+        <fieldset class="campo">
+          <legend>¿En qué zona?</legend>
+          <div class="chips">
+            <label class="chip"><input type="checkbox" name="zona" value="Madrid sur"><span>Madrid sur</span></label>
+            <label class="chip"><input type="checkbox" name="zona" value="Madrid norte"><span>Madrid norte</span></label>
+            <label class="chip"><input type="checkbox" name="zona" value="Leganés"><span>Leganés</span></label>
+            <label class="chip"><input type="checkbox" name="zona" value="Getafe"><span>Getafe</span></label>
+            <label class="chip"><input type="checkbox" name="zona" value="Fuenlabrada"><span>Fuenlabrada</span></label>
+            <label class="chip"><input type="checkbox" name="zona" value="me da igual la zona"><span>Me da igual</span></label>
+          </div>
+        </fieldset>
+
+        <div class="campo-fila">
+          <div class="campo">
+            <label for="tipo">Tipo de habitación</label>
+            <select id="tipo">
+              <option value="">Indiferente</option>
+              <option>Individual</option>
+              <option>Doble</option>
+              <option>Para pareja</option>
+              <option>Premium, con más espacio</option>
+            </select>
+          </div>
+          <div class="campo">
+            <label for="precio">Presupuesto máximo</label>
+            <select id="precio">
+              <option value="">Indiferente</option>
+              <option>hasta 400€/mes</option>
+              <option>hasta 450€/mes</option>
+              <option>hasta 500€/mes</option>
+              <option>hasta 550€/mes</option>
+              <option>más de 550€/mes</option>
+            </select>
+          </div>
+          <div class="campo">
+            <label for="entrada">¿Cuándo entrarías?</label>
+            <select id="entrada">
+              <option value="">Aún no lo sé</option>
+              <option>lo antes posible</option>
+              <option>este mes</option>
+              <option>el mes que viene</option>
+              <option>dentro de 2 o 3 meses</option>
+            </select>
+          </div>
+        </div>
+
+        <fieldset class="campo">
+          <legend>Extras que te importan</legend>
+          <div class="chips">
+            <label class="chip"><input type="checkbox" name="extra" value="baño propio"><span>🚿 Baño propio</span></label>
+            <label class="chip"><input type="checkbox" name="extra" value="aire acondicionado"><span>❄️ Aire acondicionado</span></label>
+            <label class="chip"><input type="checkbox" name="extra" value="nevera en la habitación"><span>🧊 Nevera en la habitación</span></label>
+            <label class="chip"><input type="checkbox" name="extra" value="Smart TV"><span>📺 Smart TV</span></label>
+            <label class="chip"><input type="checkbox" name="extra" value="balcón o terraza"><span>🌿 Balcón o terraza</span></label>
+            <label class="chip"><input type="checkbox" name="extra" value="cerca del metro"><span>🚇 Cerca del metro</span></label>
+            <label class="chip"><input type="checkbox" name="extra" value="ascensor"><span>🛗 Ascensor</span></label>
+            <label class="chip"><input type="checkbox" name="extra" value="piso reformado"><span>✨ Piso reformado</span></label>
+          </div>
+        </fieldset>
+
+        <div class="campo">
+          <label for="nota">¿Algo más que debamos saber? (opcional)</label>
+          <textarea id="nota" rows="2" placeholder="Ej.: trabajo por turnos y necesito una zona tranquila"></textarea>
+        </div>
+
+        <button type="submit" class="btn-primary btn-buscar">Enviar por WhatsApp →</button>
+        <p class="buscador-nota">Se abrirá WhatsApp con tu mensaje ya escrito, para que lo revises antes de enviarlo.<br>No guardamos nada en la web.</p>
+      </form>
+    </div>
+  </section>
+
 
   <!-- CÓMO FUNCIONA -->
   <section class="section como-funciona">
@@ -667,6 +795,41 @@
     });
   }
 
+
+  // Buscador a medida: compone el mensaje y lo abre en WhatsApp. Nada sale de aquí
+  // hasta que la persona pulsa enviar en su propio WhatsApp.
+  (function(){
+    var form = document.getElementById('form-busqueda');
+    if(!form) return;
+    var TEL = '34649683511';
+
+    function marcados(nombre){
+      return Array.prototype.slice
+        .call(form.querySelectorAll('input[name="' + nombre + '"]:checked'))
+        .map(function(i){ return i.value; });
+    }
+
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var zonas  = marcados('zona');
+      var extras = marcados('extra');
+      var tipo    = form.querySelector('#tipo').value;
+      var precio  = form.querySelector('#precio').value;
+      var entrada = form.querySelector('#entrada').value;
+      var nota    = form.querySelector('#nota').value.trim();
+
+      var l = ['Hola, busco habitación y quiero que me aviséis cuando salga algo:', ''];
+      if(zonas.length)  l.push('· Zona: ' + zonas.join(', '));
+      if(tipo)          l.push('· Tipo: ' + tipo);
+      if(precio)        l.push('· Presupuesto: ' + precio);
+      if(entrada)       l.push('· Entrada: ' + entrada);
+      if(extras.length) l.push('· Imprescindibles: ' + extras.join(', '));
+      if(nota)          l.push('', nota);
+      if(l.length === 2) l.push('· Aún no tengo claro qué busco, ¿me ayudáis?');
+
+      window.open('https://wa.me/' + TEL + '?text=' + encodeURIComponent(l.join('\n')), '_blank');
+    });
+  })();
 </script>
 
 </body>
