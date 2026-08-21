@@ -1,0 +1,82 @@
+[
+ {
+  "src": "img/rio-toro/01.webp",
+  "grupo": "habitacion",
+  "pie": "La habitación, con cama de 105 y nevera minibar"
+ },
+ {
+  "src": "img/rio-toro/02.webp",
+  "grupo": "habitacion",
+  "pie": "Smart TV de 32 pulgadas frente a la cama"
+ },
+ {
+  "src": "img/rio-toro/03.webp",
+  "grupo": "habitacion",
+  "pie": "Armario de dos puertas correderas"
+ },
+ {
+  "src": "img/rio-toro/04.webp",
+  "grupo": "habitacion",
+  "pie": "La habitación vista desde la puerta"
+ },
+ {
+  "src": "img/rio-toro/05.webp",
+  "grupo": "habitacion",
+  "pie": "Otra vista de la habitación"
+ },
+ {
+  "src": "img/rio-toro/06.webp",
+  "grupo": "habitacion",
+  "pie": "El armario por dentro"
+ },
+ {
+  "src": "img/rio-toro/07.webp",
+  "grupo": "habitacion",
+  "pie": "Cerradura propia en la puerta"
+ },
+ {
+  "src": "img/rio-toro/08.webp",
+  "grupo": "comunes",
+  "pie": "Cocina equipada con horno, vitro y microondas"
+ },
+ {
+  "src": "img/rio-toro/09.webp",
+  "grupo": "comunes",
+  "pie": "La cocina desde el otro lado"
+ },
+ {
+  "src": "img/rio-toro/10.webp",
+  "grupo": "comunes",
+  "pie": "Paso de la cocina al office"
+ },
+ {
+  "src": "img/rio-toro/11.webp",
+  "grupo": "comunes",
+  "pie": "Office con barra y lavadora"
+ },
+ {
+  "src": "img/rio-toro/12.webp",
+  "grupo": "comunes",
+  "pie": "Baño completo reformado"
+ },
+ {
+  "src": "img/rio-toro/13.webp",
+  "grupo": "comunes",
+  "pie": "Lavabo y espejo del baño"
+ },
+ {
+  "src": "img/rio-toro/14.webp",
+  "grupo": "comunes",
+  "pie": "Ducha con mampara"
+ },
+ {
+  "src": "img/rio-toro/15.webp",
+  "grupo": "comunes",
+  "pie": "Pasillo del piso"
+ },
+ {
+  "src": "img/rio-toro/16.webp",
+  "grupo": "comunes",
+  "pie": "Nevera grande en la zona común"
+ }
+]
