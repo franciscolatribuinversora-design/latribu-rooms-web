@@ -254,9 +254,9 @@
   .room-card.is-reservada .room-photo img{filter:saturate(0.55) brightness(0.94);}
   .room-body{padding:18px 18px 20px;flex:1;display:flex;flex-direction:column;}
   .room-zone{font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--terracota);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:6px;}
-  .room-title{font-family:'Fraunces',serif;font-size:1.08rem;font-weight:600;margin-bottom:8px;line-height:1.3;}
-  .room-meta{display:flex;gap:12px;font-size:0.82rem;color:var(--carbon-suave);margin-bottom:12px;}
-  .room-price{margin-top:auto;padding-top:10px;border-top:1px solid var(--linea);display:flex;align-items:baseline;justify-content:space-between;}
+  .room-title{font-family:'Fraunces',serif;font-size:1.08rem;font-weight:600;margin-bottom:8px;line-height:1.3;min-height:2.6em;}
+  .room-meta{font-size:0.82rem;color:var(--carbon-suave);margin-bottom:12px;line-height:1.45;min-height:2.9em;}
+  .room-price{padding-top:10px;border-top:1px solid var(--linea);display:flex;align-items:baseline;justify-content:space-between;}
   .room-price strong{font-family:'Fraunces',serif;font-size:1.3rem;color:var(--carbon);}
   .room-price .old-price{font-size:0.8rem;color:var(--carbon-suave);text-decoration:line-through;margin-right:6px;}
   .room-price span.per{font-size:0.78rem;color:var(--carbon-suave);}
@@ -265,6 +265,8 @@
     padding:10px;border-radius:2px;text-decoration:none;font-weight:600;font-size:0.86rem;transition:.15s;
   }
   .room-link:hover{background:var(--carbon);color:#fff;}
+  .room-link:not(.secundario){margin-top:auto;}
+  .room-link:not(.secundario) + .room-link.secundario{margin-top:8px;}
   .rooms-note{text-align:center;color:var(--carbon-suave);font-size:0.88rem;margin-top:32px;}
 
   /* Buscador de habitación a medida */
