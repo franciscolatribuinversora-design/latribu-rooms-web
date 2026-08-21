@@ -95,9 +95,7 @@
   ]
 }
 </script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="/fonts/fuentes.css" rel="stylesheet">
 <style>
   :root{
     --terracota:#8C4A2F;
@@ -409,6 +407,8 @@
   footer{padding:32px 0;text-align:center;}
   footer p{font-size:0.8rem;color:var(--carbon-suave);}
   footer a{color:var(--terracota);text-decoration:none;}
+  footer .footer-legal{margin-top:8px;font-size:0.82rem;}
+  footer .footer-legal a{text-decoration:underline;}
 </style>
 </head>
 <body>
@@ -450,8 +450,8 @@
             <span class="label">Disponibilidad</span>
             <span class="status">Actualizado</span>
           </div>
-          <div class="ficha-row"><span class="k">Habitaciones libres</span><span class="v">3</span></div>
-          <div class="ficha-row"><span class="k">Reservadas</span><span class="v">4</span></div>
+          <div class="ficha-row"><span class="k">Habitaciones libres</span><span class="v">2</span></div>
+          <div class="ficha-row"><span class="k">Reservadas</span><span class="v">2</span></div>
           <div class="ficha-row"><span class="k">Gestionadas</span><span class="v">+250</span></div>
           <div class="ficha-row"><span class="k">Honorarios al inquilino</span><span class="v">0 €</span></div>
           <div class="ficha-row"><span class="k">Desde</span><span class="v">390 €/mes</span></div>
@@ -493,41 +493,18 @@
 
       <div class="rooms-grid">
 
-        <div class="room-card reveal is-reservada">
-          <div class="room-photo"><img src="img/room1.webp" alt="Habitación en alquiler" loading="lazy"><span class="room-badge reservada">Reservada</span></div>
-          <div class="room-body">
-            <p class="room-zone">Tres Olivos · Madrid</p>
-            <p class="room-title">Individual junto al metro Begoña</p>
-            <p class="room-meta">🛏 Individual · ❄️ Aire acondicionado · 🚇 1 min. metro</p>
-            <div class="room-price"><strong>500€</strong><span class="per">/mes</span></div>
-            <a class="room-link" href="https://www.idealista.com/pro/novos-real-estate-madrid/inmueble/112195324/" target="_blank" rel="noopener">Ver en Idealista →</a>
-          </div>
-        </div>
-
-        <div class="room-card reveal is-reservada">
-          <div class="room-photo"><img src="img/room2.webp" alt="Habitación en alquiler" loading="lazy"><span class="room-badge reservada">Reservada</span></div>
+        <div class="room-card reveal">
+          <div class="room-photo"><img src="img/room8.webp" alt="Individual con nevera propia y Smart TV" loading="lazy"><span class="room-badge">Disponible</span></div>
           <div class="room-body">
             <p class="room-zone">San Nicasio · Leganés</p>
-            <p class="room-title">Individual cerca de la Universidad Carlos III</p>
-            <p class="room-meta">🛏 Individual · 📺 Nevera y TV · 🚇 7 min. metro</p>
-            <div class="room-price"><strong>440€</strong><span class="per">/mes</span></div>
-            <a class="room-link" href="https://www.idealista.com/pro/novos-real-estate-madrid/inmueble/110004904/" target="_blank" rel="noopener">Ver en Idealista →</a>
+            <p class="room-title">Individual con nevera propia y Smart TV</p>
+            <p class="room-meta">🛏 Individual · 🧊 Nevera minibar · 🎓 5 min. UC3M</p>
+            <div class="room-price"><strong>385€</strong><span class="per">/mes</span></div>
+            <a class="room-link" href="https://www.idealista.com/pro/novos-real-estate-madrid/inmueble/112319979/" target="_blank" rel="noopener">Ver en Idealista →</a>
           </div>
         </div>
-
-        <div class="room-card reveal is-reservada">
-          <div class="room-photo"><img src="img/room3.webp" alt="Habitación en alquiler" loading="lazy"><span class="room-badge reservada">Reservada</span></div>
-          <div class="room-body">
-            <p class="room-zone">Tres Olivos · Madrid</p>
-            <p class="room-title">Premium con aire acondicionado</p>
-            <p class="room-meta">🛏 Individual · ❄️ Aire acondicionado · 🚇 Metro Begoña</p>
-            <div class="room-price"><strong>525€</strong><span class="per">/mes</span></div>
-            <a class="room-link" href="https://www.idealista.com/pro/novos-real-estate-madrid/inmueble/112187464/" target="_blank" rel="noopener">Ver en Idealista →</a>
-          </div>
-        </div>
-
         <div class="room-card reveal">
-          <div class="room-photo"><img src="img/room4.webp" alt="Habitación en alquiler" loading="lazy"><span class="room-offer">Oferta verano</span></div>
+          <div class="room-photo"><img src="img/room4.webp" alt="Individual con baño y aseo propio, piso reformado" loading="lazy"><span class="room-offer">Oferta verano</span></div>
           <div class="room-body">
             <p class="room-zone">San Fermín · Madrid</p>
             <p class="room-title">Individual con baño y aseo propio, piso reformado</p>
@@ -536,40 +513,26 @@
             <a class="room-link" href="https://www.idealista.com/pro/novos-real-estate-madrid/inmueble/112077433/" target="_blank" rel="noopener">Ver en Idealista →</a>
           </div>
         </div>
-
-        <div class="room-card reveal">
-          <div class="room-photo"><img src="img/room5.webp" alt="Habitación en alquiler" loading="lazy"><span class="room-badge">Disponible</span></div>
+        <div class="room-card reveal is-reservada">
+          <div class="room-photo"><img src="img/room5.webp" alt="Premium con 2 baños completos" loading="lazy"><span class="room-badge reservada">Reservada</span></div>
           <div class="room-body">
             <p class="room-zone">Tres Olivos · Madrid</p>
             <p class="room-title">Premium con 2 baños completos</p>
-            <p class="room-meta">🛏 Individual · 🚿 2 baños · 🏥 10 min. Hosp. Ramón y Cajal</p>
+            <p class="room-meta">🛏 Premium · 🚿 2 baños · ❄️ Aire acondicionado</p>
             <div class="room-price"><strong>490€</strong><span class="per">/mes</span></div>
-            <a class="room-link" href="https://www.idealista.com/pro/novos-real-estate-madrid/inmueble/112054450/" target="_blank" rel="noopener">Ver en Idealista →</a>
+            <a class="room-link" href="https://wa.me/34649683511?text=Hola%2C%20me%20interesa%20una%20habitaci%C3%B3n%20como%20esta%20cuando%20quede%20libre" target="_blank" rel="noopener">Avísame si queda libre →</a>
           </div>
         </div>
-
         <div class="room-card reveal is-reservada">
-          <div class="room-photo"><img src="img/room6.webp" alt="Habitación en alquiler" loading="lazy"><span class="room-badge reservada">Reservada</span></div>
-          <div class="room-body">
-            <p class="room-zone">San Nicasio · Leganés</p>
-            <p class="room-title">Individual en zona con colegios y servicios</p>
-            <p class="room-meta">🛏 Individual · 🚇 10 min. metro · 🏫 Cerca Carlos III</p>
-            <div class="room-price"><strong>395€</strong><span class="per">/mes</span></div>
-            <a class="room-link" href="https://www.idealista.com/pro/novos-real-estate-madrid/inmueble/112137331/" target="_blank" rel="noopener">Ver en Idealista →</a>
-          </div>
-        </div>
-
-        <div class="room-card reveal">
-          <div class="room-photo"><img src="img/room7.webp" alt="Habitación en alquiler" loading="lazy"><span class="room-badge">Disponible</span></div>
+          <div class="room-photo"><img src="img/room7.webp" alt="Individual con nevera y Smart TV, piso luminoso" loading="lazy"><span class="room-badge reservada">Reservada</span></div>
           <div class="room-body">
             <p class="room-zone">San Nicasio · Leganés</p>
             <p class="room-title">Individual con nevera y Smart TV, piso luminoso</p>
-            <p class="room-meta">🛏 Individual · 📺 Smart TV · 🎓 5 min. UC3M</p>
+            <p class="room-meta">🛏 Individual · 📺 Smart TV · 🧊 Nevera minibar</p>
             <div class="room-price"><strong>435€</strong><span class="per">/mes</span></div>
-            <a class="room-link" href="https://www.idealista.com/pro/novos-real-estate-madrid/inmueble/112214758/" target="_blank" rel="noopener">Ver en Idealista →</a>
+            <a class="room-link" href="https://wa.me/34649683511?text=Hola%2C%20me%20interesa%20una%20habitaci%C3%B3n%20como%20esta%20cuando%20quede%20libre" target="_blank" rel="noopener">Avísame si queda libre →</a>
           </div>
         </div>
-
       </div>
       <p class="rooms-note">¿No ves lo que buscas? <a href="#buscar">Cuéntanos qué necesitas</a> y te avisamos en cuanto salga una habitación nueva.</p>
     </div>
@@ -760,6 +723,7 @@
 
 <footer>
   <p>&copy; 2026 La Tribu Rooms — Madrid, España · <a href="mailto:francisco.latribuinversora@gmail.com">francisco.latribuinversora@gmail.com</a></p>
+  <p class="footer-legal"><a href="/aviso-legal.html">Aviso legal</a> · <a href="/privacidad.html">Política de privacidad</a></p>
 </footer>
 
 <a
