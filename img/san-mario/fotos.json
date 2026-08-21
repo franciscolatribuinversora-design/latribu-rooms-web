@@ -1,0 +1,221 @@
+{
+ "hab1": [
+  {
+   "src": "/img/san-mario/h1-01.webp",
+   "grupo": "habitacion",
+   "pie": "La habitación, con cama con canapé y Smart TV"
+  },
+  {
+   "src": "/img/san-mario/h1-02.webp",
+   "grupo": "habitacion",
+   "pie": "Armario y cómoda"
+  },
+  {
+   "src": "/img/san-mario/h1-03.webp",
+   "grupo": "habitacion",
+   "pie": "Escritorio junto a la ventana, con aire acondicionado"
+  },
+  {
+   "src": "/img/san-mario/h1-04.webp",
+   "grupo": "habitacion",
+   "pie": "El canapé abatible, para guardar"
+  },
+  {
+   "src": "/img/san-mario/h1-05.webp",
+   "grupo": "habitacion",
+   "pie": "La habitación desde la puerta"
+  },
+  {
+   "src": "/img/san-mario/h1-06.webp",
+   "grupo": "habitacion",
+   "pie": "Vista completa con el aire acondicionado"
+  },
+  {
+   "src": "/img/san-mario/h1-07.webp",
+   "grupo": "habitacion",
+   "pie": "Zona de escritorio"
+  },
+  {
+   "src": "/img/san-mario/comun-01.webp",
+   "grupo": "comunes",
+   "pie": "Cocina con barra para comer"
+  },
+  {
+   "src": "/img/san-mario/comun-02.webp",
+   "grupo": "comunes",
+   "pie": "Vitrocerámica, campana y cajones equipados"
+  },
+  {
+   "src": "/img/san-mario/comun-03.webp",
+   "grupo": "comunes",
+   "pie": "Nevera grande y zona de office"
+  },
+  {
+   "src": "/img/san-mario/comun-04.webp",
+   "grupo": "comunes",
+   "pie": "Lavadora y microondas"
+  },
+  {
+   "src": "/img/san-mario/comun-05.webp",
+   "grupo": "comunes",
+   "pie": "La nevera por dentro"
+  },
+  {
+   "src": "/img/san-mario/comun-06.webp",
+   "grupo": "comunes",
+   "pie": "Baño completo, compartido"
+  },
+  {
+   "src": "/img/san-mario/comun-07.webp",
+   "grupo": "comunes",
+   "pie": "Ducha del baño"
+  },
+  {
+   "src": "/img/san-mario/comun-08.webp",
+   "grupo": "comunes",
+   "pie": "Lavabo y espejo"
+  },
+  {
+   "src": "/img/san-mario/comun-09.webp",
+   "grupo": "comunes",
+   "pie": "Otra vista del baño"
+  },
+  {
+   "src": "/img/san-mario/comun-10.webp",
+   "grupo": "comunes",
+   "pie": "Aseo independiente, compartido"
+  },
+  {
+   "src": "/img/san-mario/comun-11.webp",
+   "grupo": "comunes",
+   "pie": "El aseo, segunda vista"
+  },
+  {
+   "src": "/img/san-mario/comun-12.webp",
+   "grupo": "comunes",
+   "pie": "Lavabo del aseo"
+  },
+  {
+   "src": "/img/san-mario/comun-13.webp",
+   "grupo": "comunes",
+   "pie": "Detalle del aseo"
+  }
+ ],
+ "hab3": [
+  {
+   "src": "/img/san-mario/h3-01.webp",
+   "grupo": "habitacion",
+   "pie": "La habitación, luminosa y exterior"
+  },
+  {
+   "src": "/img/san-mario/h3-02.webp",
+   "grupo": "habitacion",
+   "pie": "Armario con puertas de espejo"
+  },
+  {
+   "src": "/img/san-mario/h3-03.webp",
+   "grupo": "habitacion",
+   "pie": "Escritorio y armario"
+  },
+  {
+   "src": "/img/san-mario/h3-04.webp",
+   "grupo": "habitacion",
+   "pie": "Cama y mesita"
+  },
+  {
+   "src": "/img/san-mario/h3-05.webp",
+   "grupo": "habitacion",
+   "pie": "Smart TV frente a la cama"
+  },
+  {
+   "src": "/img/san-mario/h3-06.webp",
+   "grupo": "habitacion",
+   "pie": "Las vistas desde la ventana"
+  },
+  {
+   "src": "/img/san-mario/h3-07.webp",
+   "grupo": "habitacion",
+   "pie": "Otra vista de la habitación"
+  },
+  {
+   "src": "/img/san-mario/h3-08.webp",
+   "grupo": "habitacion",
+   "pie": "El canapé abatible, para guardar"
+  },
+  {
+   "src": "/img/san-mario/h3-09.webp",
+   "grupo": "habitacion",
+   "pie": "Escritorio y silla"
+  },
+  {
+   "src": "/img/san-mario/h3-10.webp",
+   "grupo": "habitacion",
+   "pie": "Aire acondicionado y entrada"
+  },
+  {
+   "src": "/img/san-mario/comun-01.webp",
+   "grupo": "comunes",
+   "pie": "Cocina con barra para comer"
+  },
+  {
+   "src": "/img/san-mario/comun-02.webp",
+   "grupo": "comunes",
+   "pie": "Vitrocerámica, campana y cajones equipados"
+  },
+  {
+   "src": "/img/san-mario/comun-03.webp",
+   "grupo": "comunes",
+   "pie": "Nevera grande y zona de office"
+  },
+  {
+   "src": "/img/san-mario/comun-04.webp",
+   "grupo": "comunes",
+   "pie": "Lavadora y microondas"
+  },
+  {
+   "src": "/img/san-mario/comun-05.webp",
+   "grupo": "comunes",
+   "pie": "La nevera por dentro"
+  },
+  {
+   "src": "/img/san-mario/comun-06.webp",
+   "grupo": "comunes",
+   "pie": "Baño completo, compartido"
+  },
+  {
+   "src": "/img/san-mario/comun-07.webp",
+   "grupo": "comunes",
+   "pie": "Ducha del baño"
+  },
+  {
+   "src": "/img/san-mario/comun-08.webp",
+   "grupo": "comunes",
+   "pie": "Lavabo y espejo"
+  },
+  {
+   "src": "/img/san-mario/comun-09.webp",
+   "grupo": "comunes",
+   "pie": "Otra vista del baño"
+  },
+  {
+   "src": "/img/san-mario/comun-10.webp",
+   "grupo": "comunes",
+   "pie": "Aseo independiente, compartido"
+  },
+  {
+   "src": "/img/san-mario/comun-11.webp",
+   "grupo": "comunes",
+   "pie": "El aseo, segunda vista"
+  },
+  {
+   "src": "/img/san-mario/comun-12.webp",
+   "grupo": "comunes",
+   "pie": "Lavabo del aseo"
+  },
+  {
+   "src": "/img/san-mario/comun-13.webp",
+   "grupo": "comunes",
+   "pie": "Detalle del aseo"
+  }
+ ]
+}
