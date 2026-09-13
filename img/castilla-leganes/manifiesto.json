@@ -1,0 +1,77 @@
+[
+ {
+  "src": "/img/castilla-leganes/04.webp",
+  "grupo": "habitacion",
+  "pie": "La habitación (4 de 7)"
+ },
+ {
+  "src": "/img/castilla-leganes/01.webp",
+  "grupo": "habitacion",
+  "pie": "La habitación (1 de 7)"
+ },
+ {
+  "src": "/img/castilla-leganes/02.webp",
+  "grupo": "habitacion",
+  "pie": "La habitación (2 de 7)"
+ },
+ {
+  "src": "/img/castilla-leganes/03.webp",
+  "grupo": "habitacion",
+  "pie": "La habitación (3 de 7)"
+ },
+ {
+  "src": "/img/castilla-leganes/05.webp",
+  "grupo": "habitacion",
+  "pie": "La habitación (5 de 7)"
+ },
+ {
+  "src": "/img/castilla-leganes/06.webp",
+  "grupo": "habitacion",
+  "pie": "La habitación (6 de 7)"
+ },
+ {
+  "src": "/img/castilla-leganes/07.webp",
+  "grupo": "habitacion",
+  "pie": "La habitación (7 de 7)"
+ },
+ {
+  "src": "/img/castilla-leganes/08.webp",
+  "grupo": "comunes",
+  "pie": "El baño (1 de 3)"
+ },
+ {
+  "src": "/img/castilla-leganes/09.webp",
+  "grupo": "comunes",
+  "pie": "El baño (2 de 3)"
+ },
+ {
+  "src": "/img/castilla-leganes/10.webp",
+  "grupo": "comunes",
+  "pie": "El baño (3 de 3)"
+ },
+ {
+  "src": "/img/castilla-leganes/11.webp",
+  "grupo": "comunes",
+  "pie": "La cocina (1 de 5)"
+ },
+ {
+  "src": "/img/castilla-leganes/12.webp",
+  "grupo": "comunes",
+  "pie": "La cocina (2 de 5)"
+ },
+ {
+  "src": "/img/castilla-leganes/13.webp",
+  "grupo": "comunes",
+  "pie": "La cocina (3 de 5)"
+ },
+ {
+  "src": "/img/castilla-leganes/14.webp",
+  "grupo": "comunes",
+  "pie": "La cocina (4 de 5)"
+ },
+ {
+  "src": "/img/castilla-leganes/15.webp",
+  "grupo": "comunes",
+  "pie": "La cocina (5 de 5)"
+ }
+]
