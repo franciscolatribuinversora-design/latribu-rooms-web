@@ -240,7 +240,9 @@
   }
   .room-card:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(43,39,36,0.1);}
   .room-photo{
-    height:180px;background:linear-gradient(135deg,#E9DCD2,#F1E7DA);
+    /* misma proporción que las portadas de img/portadas: así no se recorta nada
+       y la marca de agua queda siempre a la misma altura en todas las tarjetas */
+    aspect-ratio:900/470;background:linear-gradient(135deg,#E9DCD2,#F1E7DA);
     display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;
   }
   .room-photo img{width:100%;height:100%;object-fit:cover;}
@@ -520,7 +522,7 @@
       <div class="rooms-grid">
 
         <div class="room-card reveal">
-          <a class="room-photo" href="/habitacion-albacete-getafe.html"><img src="img/albacete-getafe/01.webp" alt="Individual en piso con dos baños" loading="lazy"><span class="room-badge">Disponible</span></a>
+          <a class="room-photo" href="/habitacion-albacete-getafe.html"><img src="img/portadas/albacete-getafe-01.webp" alt="Individual en piso con dos baños" loading="lazy"><span class="room-badge">Disponible</span></a>
           <div class="room-body">
             <p class="room-zone">Juan de la Cierva · Getafe</p>
             <p class="room-title">Individual en piso con dos baños</p>
@@ -531,7 +533,7 @@
           </div>
         </div>
         <div class="room-card reveal">
-          <a class="room-photo" href="/habitacion-ciudades-getafe.html"><img src="img/ciudades-getafe/02.webp" alt="Individual con nevera minibar propia" loading="lazy"><span class="room-badge">Disponible</span></a>
+          <a class="room-photo" href="/habitacion-ciudades-getafe.html"><img src="img/portadas/ciudades-getafe-02.webp" alt="Individual con nevera minibar propia" loading="lazy"><span class="room-badge">Disponible</span></a>
           <div class="room-body">
             <p class="room-zone">Juan de la Cierva · Getafe</p>
             <p class="room-title">Individual con nevera minibar propia</p>
@@ -542,7 +544,7 @@
           </div>
         </div>
         <div class="room-card reveal">
-          <a class="room-photo" href="/habitacion-alonso-mendoza-getafe.html"><img src="img/alonso-mendoza-getafe/02.webp" alt="Individual en piso exterior con ascensor" loading="lazy"><span class="room-badge">Disponible</span></a>
+          <a class="room-photo" href="/habitacion-alonso-mendoza-getafe.html"><img src="img/portadas/alonso-mendoza-getafe-02.webp" alt="Individual en piso exterior con ascensor" loading="lazy"><span class="room-badge">Disponible</span></a>
           <div class="room-body">
             <p class="room-zone">La Alhóndiga · Getafe</p>
             <p class="room-title">Individual en piso exterior con ascensor</p>
@@ -553,7 +555,7 @@
           </div>
         </div>
         <div class="room-card reveal">
-          <a class="room-photo" href="/habitacion-rio-lozoya-leganes.html"><img src="img/rio-lozoya-leganes/02.webp" alt="Individual con terraza y Smart TV" loading="lazy"><span class="room-badge">Disponible</span></a>
+          <a class="room-photo" href="/habitacion-rio-lozoya-leganes.html"><img src="img/portadas/rio-lozoya-leganes-02.webp" alt="Individual con terraza y Smart TV" loading="lazy"><span class="room-badge">Disponible</span></a>
           <div class="room-body">
             <p class="room-zone">San Nicasio · Leganés</p>
             <p class="room-title">Individual con terraza y Smart TV</p>
@@ -573,7 +575,7 @@
       <div class="rooms-grid">
 
         <div class="room-card reveal is-reservada">
-          <a class="room-photo" href="/habitacion-castilla-leganes.html"><img src="img/castilla-leganes/04.webp" alt="Individual con terraza en el piso" loading="lazy"><span class="room-badge reservada">Reservada</span></a>
+          <a class="room-photo" href="/habitacion-castilla-leganes.html"><img src="img/portadas/castilla-leganes-04.webp" alt="Individual con terraza en el piso" loading="lazy"><span class="room-badge reservada">Reservada</span></a>
           <div class="room-body">
             <p class="room-zone">San Nicasio · Leganés</p>
             <p class="room-title">Individual con terraza en el piso</p>
@@ -584,7 +586,7 @@
           </div>
         </div>
         <div class="room-card reveal is-reservada">
-          <a class="room-photo" href="/habitacion-polvoranca-fuenlabrada.html"><img src="img/polvoranca-fuenlabrada/02.webp" alt="Individual con nevera minibar, disponible ya" loading="lazy"><span class="room-badge reservada">Reservada</span></a>
+          <a class="room-photo" href="/habitacion-polvoranca-fuenlabrada.html"><img src="img/portadas/polvoranca-fuenlabrada-02.webp" alt="Individual con nevera minibar, disponible ya" loading="lazy"><span class="room-badge reservada">Reservada</span></a>
           <div class="room-body">
             <p class="room-zone">Centro · Fuenlabrada</p>
             <p class="room-title">Individual con nevera minibar, disponible ya</p>
@@ -595,7 +597,7 @@
           </div>
         </div>
         <div class="room-card reveal is-reservada">
-          <a class="room-photo" href="/habitacion-navarra-leganes.html"><img src="img/navarra-leganes/03.webp" alt="Individual con balcón y nevera minibar" loading="lazy"><span class="room-badge reservada">Reservada</span></a>
+          <a class="room-photo" href="/habitacion-navarra-leganes.html"><img src="img/portadas/navarra-leganes-03.webp" alt="Individual con balcón y nevera minibar" loading="lazy"><span class="room-badge reservada">Reservada</span></a>
           <div class="room-body">
             <p class="room-zone">San Nicasio · Leganés</p>
             <p class="room-title">Individual con balcón y nevera minibar</p>
@@ -606,7 +608,7 @@
           </div>
         </div>
         <div class="room-card reveal is-reservada">
-          <a class="room-photo" href="/habitacion-baracaldo-madrid.html"><img src="img/baracaldo-madrid/11.webp" alt="Individual con balcón privado, en Madrid capital" loading="lazy"><span class="room-badge reservada">Reservada</span></a>
+          <a class="room-photo" href="/habitacion-baracaldo-madrid.html"><img src="img/portadas/baracaldo-madrid-11.webp" alt="Individual con balcón privado, en Madrid capital" loading="lazy"><span class="room-badge reservada">Reservada</span></a>
           <div class="room-body">
             <p class="room-zone">Valdeacederas · Madrid</p>
             <p class="room-title">Individual con balcón privado, en Madrid capital</p>
@@ -617,7 +619,7 @@
           </div>
         </div>
         <div class="room-card reveal is-reservada">
-          <a class="room-photo" href="/habitacion-rio-toro.html"><img src="img/room8.webp" alt="Individual con nevera propia y Smart TV" loading="lazy"><span class="room-badge reservada">Reservada</span></a>
+          <a class="room-photo" href="/habitacion-rio-toro.html"><img src="img/portadas/room8.webp" alt="Individual con nevera propia y Smart TV" loading="lazy"><span class="room-badge reservada">Reservada</span></a>
           <div class="room-body">
             <p class="room-zone">San Nicasio · Leganés</p>
             <p class="room-title">Individual con nevera propia y Smart TV</p>
@@ -628,7 +630,7 @@
           </div>
         </div>
         <div class="room-card reveal is-reservada">
-          <a class="room-photo" href="/habitacion-san-mario-1.html"><img src="img/room4.webp" alt="Individual en piso reformado, con aire acondicionado" loading="lazy"><span class="room-badge reservada">Reservada</span></a>
+          <a class="room-photo" href="/habitacion-san-mario-1.html"><img src="img/portadas/room4.webp" alt="Individual en piso reformado, con aire acondicionado" loading="lazy"><span class="room-badge reservada">Reservada</span></a>
           <div class="room-body">
             <p class="room-zone">San Fermín · Madrid</p>
             <p class="room-title">Individual en piso reformado, con aire acondicionado</p>
@@ -639,7 +641,7 @@
           </div>
         </div>
         <div class="room-card reveal is-reservada">
-          <a class="room-photo" href="/habitacion-san-mario-3.html"><img src="img/room9.webp" alt="Individual exterior con vistas y aire acondicionado" loading="lazy"><span class="room-badge reservada">Reservada</span></a>
+          <a class="room-photo" href="/habitacion-san-mario-3.html"><img src="img/portadas/room9.webp" alt="Individual exterior con vistas y aire acondicionado" loading="lazy"><span class="room-badge reservada">Reservada</span></a>
           <div class="room-body">
             <p class="room-zone">San Fermín · Madrid</p>
             <p class="room-title">Individual exterior con vistas y aire acondicionado</p>
@@ -650,7 +652,7 @@
           </div>
         </div>
         <div class="room-card reveal is-reservada">
-          <div class="room-photo"><img src="img/room5.webp" alt="Premium con 2 baños completos" loading="lazy"><span class="room-badge reservada">Reservada</span></div>
+          <div class="room-photo"><img src="img/portadas/room5.webp" alt="Premium con 2 baños completos" loading="lazy"><span class="room-badge reservada">Reservada</span></div>
           <div class="room-body">
             <p class="room-zone">Tres Olivos · Madrid</p>
             <p class="room-title">Premium con 2 baños completos</p>
@@ -660,7 +662,7 @@
           </div>
         </div>
         <div class="room-card reveal is-reservada">
-          <div class="room-photo"><img src="img/room7.webp" alt="Individual con nevera y Smart TV, piso luminoso" loading="lazy"><span class="room-badge reservada">Reservada</span></div>
+          <div class="room-photo"><img src="img/portadas/room7.webp" alt="Individual con nevera y Smart TV, piso luminoso" loading="lazy"><span class="room-badge reservada">Reservada</span></div>
           <div class="room-body">
             <p class="room-zone">San Nicasio · Leganés</p>
             <p class="room-title">Individual con nevera y Smart TV, piso luminoso</p>
