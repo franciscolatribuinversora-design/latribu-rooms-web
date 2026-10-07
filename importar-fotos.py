@@ -2,7 +2,12 @@
 """Prepara las fotos de un piso para la web.
 
 Uso:
-    python3 importar-fotos.py "/ruta/a/la/carpeta del piso" slug-del-piso
+    python3 importar-fotos.py "/ruta/a/la/carpeta del piso" slug [habitacion]
+
+El tercer argumento es la carpeta de la habitación que se publica (por ejemplo h4).
+Si se indica, se cogen sus fotos y las de las zonas comunes, y se dejan fuera las
+del resto de habitaciones del piso: en un piso compartido cada habitación tiene su
+propia ficha.
 
 Coge las fotos de la carpeta (y sus subcarpetas: habitacion, cocina, baño, salon,
 terraza), les pone la marca de agua, las guarda como img/<slug>/NN.webp y escribe
@@ -17,7 +22,7 @@ Detalles que costaron un rato en su momento y por eso están resueltos aquí:
   - Solo se descarta un HEIC cuando existe el MISMO nombre en jpeg. Nombres
     parecidos ("BAÑO 1.jpg" y "BAÑO1.JPG") son fotos distintas.
 """
-import importlib.util, json, os, subprocess, sys, unicodedata
+import importlib.util, json, os, re, subprocess, sys, unicodedata
 from PIL import Image, ImageOps
 
 AQUI = os.path.dirname(os.path.abspath(__file__))
@@ -25,11 +30,11 @@ spec = importlib.util.spec_from_file_location("marca", os.path.join(AQUI, "herra
 marca = importlib.util.module_from_spec(spec); spec.loader.exec_module(marca)
 
 EXTS = ('.jpg', '.jpeg', '.png', '.heic')
-GRUPO = {"habitacion": "habitacion", "cocina": "comunes", "baño": "comunes",
+GRUPO = {"habitacion": "habitacion", "cocina": "comunes", "baño": "comunes", "aseo": "comunes",
          "salon": "comunes", "terraza": "comunes", "comunes": "comunes"}
-PIE = {"habitacion": "La habitación", "cocina": "La cocina", "baño": "El baño",
+PIE = {"habitacion": "La habitación", "cocina": "La cocina", "baño": "El baño", "aseo": "El aseo",
        "salon": "El salón", "terraza": "La terraza", "comunes": "El piso"}
-ORDEN = {"habitacion": 0, "salon": 1, "cocina": 2, "baño": 3, "terraza": 4, "comunes": 9}
+ORDEN = {"habitacion": 0, "salon": 1, "cocina": 2, "baño": 3, "aseo": 4, "terraza": 5, "comunes": 9}
 
 norm = lambda s: unicodedata.normalize('NFC', s).lower()
 
@@ -37,9 +42,12 @@ norm = lambda s: unicodedata.normalize('NFC', s).lower()
 def clasifica(ruta):
     """De la carpeta más profunda hacia fuera: 'h1/baño' es baño, no habitación."""
     for parte in reversed([norm(x) for x in ruta.split(os.sep)]):
-        for clave in ("baño", "bano", "cocina", "salon", "terraza", "habitacion"):
+        parte = parte.strip()
+        for clave in ("baño", "bano", "aseo", "cocina", "salon", "terraza", "habitacion"):
             if clave in parte:
                 return "baño" if clave == "bano" else clave
+        if re.match(r'^h\d+$', parte):      # h2, h3, h4... son habitaciones
+            return "habitacion"
     return "comunes"
 
 
@@ -54,9 +62,15 @@ def normalizar(origen, temporal):
     return temporal
 
 
-def importar(carpeta, slug, destino_base=AQUI):
+ES_HABITACION = re.compile(r'^(h\d+|habitacion.*)$')
+
+def importar(carpeta, slug, habitacion=None, destino_base=AQUI):
+    objetivo = norm(habitacion) if habitacion else None
     fotos = []
     for dirpath, _, files in os.walk(carpeta):
+        carpeta_actual = norm(os.path.basename(dirpath)).strip()
+        if objetivo and ES_HABITACION.match(carpeta_actual) and carpeta_actual != objetivo:
+            continue   # habitación de otro inquilino: no va en esta ficha
         for f in sorted(files):
             if not f.startswith('.') and os.path.splitext(f)[1].lower() in EXTS:
                 fotos.append(os.path.join(dirpath, f))
@@ -92,10 +106,10 @@ def importar(carpeta, slug, destino_base=AQUI):
 
 
 if __name__ == '__main__':
-    if len(sys.argv) != 3:
+    if len(sys.argv) not in (3, 4):
         print(__doc__)
         sys.exit(1)
-    m = importar(sys.argv[1], sys.argv[2])
+    m = importar(sys.argv[1], sys.argv[2], sys.argv[3] if len(sys.argv) == 4 else None)
     print(f'{len(m)} fotos en img/{sys.argv[2]}/')
     for x in m:
         print(' ', x['src'], '·', x['pie'])

@@ -1,0 +1,108 @@
+[
+  {
+    "slug": "rio-duero-leganes-h4",
+    "zona": "San Nicasio · Leganés",
+    "municipio": "Leganés",
+    "calle": "Calle Río Duero",
+    "cp": "28914",
+    "titulo": "Individual con nevera minibar y Smart TV",
+    "precio": 425,
+    "suministros": 40,
+    "disponible": "Ahora",
+    "piso": "60 m², 1 baño y 1 aseo",
+    "planta": "2ª exterior, sin ascensor",
+    "portada": "02",
+    "idealista": "110013606",
+    "claim": "Habitación individual con cama de 135, nevera minibar y Smart TV, al lado de la Universidad Carlos III.",
+    "meta": "Individual con nevera minibar y Smart TV en San Nicasio (Leganés). Piso exterior de 60 m² con baño y aseo. 425€/mes sin honorarios de agencia.",
+    "habitacion": [
+      "Cama de 135 cm con canapé",
+      "Armario de 3 puertas con espejo",
+      "Escritorio y silla",
+      "Smart TV de 32 pulgadas",
+      "Nevera minibar",
+      "Mesita de noche y lámpara",
+      "Ventilador de techo",
+      "Calefacción por gas",
+      "Wifi en la habitación",
+      "Cerradura propia"
+    ],
+    "comunes": [
+      "Cocina totalmente equipada: nevera, horno y microondas",
+      "1 baño y 1 aseo, para no hacer cola",
+      "Limpieza de zonas comunes y wifi incluidos en el precio"
+    ],
+    "nota": "A 10 minutos del metro de San Nicasio, 5 de Leganés Central y al lado de la UC3M. Zona con servicios, aparcamiento fácil y salida rápida a la M-40.",
+    "resumen": "🛏 Cama de 135 · 🧊 Nevera minibar · 📺 Smart TV"
+  },
+  {
+    "slug": "alonso-mendoza-getafe-h4",
+    "zona": "La Alhóndiga · Getafe",
+    "municipio": "Getafe",
+    "calle": "Calle Alonso de Mendoza",
+    "cp": "28914",
+    "titulo": "Individual con cama de 135 y ascensor",
+    "precio": 430,
+    "suministros": 40,
+    "disponible": "Ahora",
+    "piso": "63 m², 1 baño",
+    "planta": "2ª exterior, con ascensor",
+    "portada": "04",
+    "idealista": "112758963",
+    "claim": "Habitación individual con cama de 135 en un piso exterior y luminoso, a 5 minutos del metro de Alonso de Mendoza y 10 de la UC3M.",
+    "meta": "Individual con cama de 135 en Calle Alonso de Mendoza, La Alhóndiga (Getafe). Piso exterior de 63 m² con ascensor. 430€/mes sin honorarios de agencia.",
+    "habitacion": [
+      "Cama de 135 cm a estrenar",
+      "Armario de 3 puertas",
+      "Escritorio y silla",
+      "Mesita de noche y lámpara",
+      "Ventilador de techo",
+      "Calefacción eléctrica",
+      "Wifi en la habitación",
+      "Cerradura propia"
+    ],
+    "comunes": [
+      "Cocina totalmente equipada: nevera, horno y microondas",
+      "Baño completo compartido",
+      "Limpieza de zonas comunes incluida en el precio"
+    ],
+    "nota": "A 5 minutos del metro de Alonso de Mendoza, 10 de la UC3M y 12 de la Estación Central de Getafe.",
+    "resumen": "🛏 Cama de 135 · 🛗 Con ascensor · 🎓 10 min. UC3M"
+  },
+  {
+    "slug": "polvoranca-fuenlabrada-h3",
+    "zona": "Centro · Fuenlabrada",
+    "municipio": "Fuenlabrada",
+    "calle": "Calle de Polvoranca",
+    "cp": "28941",
+    "titulo": "Individual con Smart TV y terraza en el piso",
+    "precio": 390,
+    "suministros": 40,
+    "disponible": "Ahora",
+    "piso": "65 m², 1 baño",
+    "planta": "2ª exterior, sin ascensor",
+    "portada": "02",
+    "idealista": "110158179",
+    "claim": "Habitación individual con cama de 135 y Smart TV, en un piso exterior con terraza en pleno centro de Fuenlabrada.",
+    "meta": "Individual con Smart TV en Calle de Polvoranca, centro de Fuenlabrada. Piso exterior de 65 m² con terraza. 390€/mes sin honorarios de agencia.",
+    "habitacion": [
+      "Cama de 135 cm a estrenar",
+      "Armario de 3 puertas",
+      "Escritorio y silla",
+      "Smart TV de 32 pulgadas",
+      "Mesita de noche y lámpara",
+      "Ventilador de techo",
+      "Calefacción eléctrica",
+      "Wifi incluido en el precio",
+      "Cerradura propia"
+    ],
+    "comunes": [
+      "Cocina totalmente equipada: nevera, horno y microondas",
+      "Baño completo compartido",
+      "Terraza",
+      "Limpieza de zonas comunes y wifi incluidos (luz y agua aparte)"
+    ],
+    "nota": "En pleno centro, a 10 minutos del metro Parque de los Estados y 10 de la estación central de Fuenlabrada.",
+    "resumen": "🛏 Cama de 135 · 📺 Smart TV · 🌿 Terraza"
+  }
+]
