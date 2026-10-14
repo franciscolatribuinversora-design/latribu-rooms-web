@@ -104,5 +104,40 @@
     ],
     "nota": "En pleno centro, a 10 minutos del metro Parque de los Estados y 10 de la estación central de Fuenlabrada.",
     "resumen": "🛏 Cama de 135 · 📺 Smart TV · 🌿 Terraza"
+  },
+  {
+    "slug": "rio-manzanares-leganes-h2",
+    "zona": "San Nicasio · Leganés",
+    "municipio": "Leganés",
+    "calle": "Calle Río Manzanares",
+    "cp": "28914",
+    "titulo": "Individual con Smart TV y canapé",
+    "precio": 390,
+    "suministros": 40,
+    "disponible": "Ahora",
+    "piso": "63 m², 1 baño",
+    "planta": "3ª exterior, sin ascensor",
+    "portada": "07",
+    "idealista": "112788894",
+    "claim": "Habitación individual con cama de 105 con canapé y Smart TV, en un piso exterior y luminoso a 4 minutos del metro de San Nicasio.",
+    "meta": "Individual con Smart TV en Calle Río Manzanares, San Nicasio (Leganés). Piso exterior de 63 m². 390€/mes sin honorarios de agencia.",
+    "nota": "A 4 minutos del metro de San Nicasio y 8 de la estación de Leganés Central y de la UC3M.",
+    "resumen": "🛏 Cama de 105 · 📺 Smart TV · 🚇 4 min. metro",
+    "habitacion": [
+      "Cama de 105 cm con canapé",
+      "Armario de 2 puertas correderas",
+      "Escritorio y silla",
+      "Smart TV de 32 pulgadas",
+      "Mesita de noche y lámpara",
+      "Ventilador de techo",
+      "Calefacción por gas",
+      "Wifi en la habitación",
+      "Cerradura propia"
+    ],
+    "comunes": [
+      "Cocina totalmente equipada: nevera, horno y microondas",
+      "Baño completo compartido",
+      "Limpieza de zonas comunes y wifi incluidos (luz y agua aparte)"
+    ]
   }
 ]
